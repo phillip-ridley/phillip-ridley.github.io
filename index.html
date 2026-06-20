@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phillip K. Ridley</title>
+  <meta name="description" content="Phillip K. Ridley — Battery Materials Scientist, Engineer, and Technical Consultant. Senior Research Associate at CUNY Energy Institute." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #222;
+      background: #fff;
+      padding: 3rem 1.5rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.9rem;
+    }
+    nav .site-name { font-weight: 500; color: #222; }
+    nav ul { display: flex; gap: 1.5rem; list-style: none; }
+    nav a { color: #555; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    nav a.active { color: #222; }
+
+    /* PROFILE */
+    .profile {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: #eee;
+    }
+    .avatar-placeholder {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #e8e8e8;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #999;
+    }
+    .profile-text h1 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin-bottom: 0.15rem;
+    }
+    .profile-text .role {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.1rem;
+    }
+    .profile-text .inst {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    .profile-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .profile-links a {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.85rem;
+      color: #1a6bb5;
+      text-decoration: none;
+    }
+    .profile-links a:hover { text-decoration: underline; }
+    .profile-links .email {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.85rem;
+      color: #444;
+    }
+
+    /* SECTIONS */
+    h2 {
+      font-size: 1.1rem;
+      font-weight: normal;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.3rem;
+      margin: 2rem 0 0.9rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    p { margin-bottom: 0.9rem; color: #333; }
+    p:last-child { margin-bottom: 0; }
+    a { color: #1a6bb5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* MEDIA */
+    .media-list { list-style: none; padding: 0; }
+    .media-list li {
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+      border-left: 2px solid #eee;
+      font-size: 0.93rem;
+      color: #333;
+    }
+    .media-list .outlet { color: #666; font-style: italic; }
+    .media-list .media-date {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.78rem;
+      color: #999;
+    }
+
+    /* CONSULTING */
+    .consulting-note {
+      background: #f9f9f9;
+      border-left: 3px solid #ccc;
+      padding: 0.8rem 1rem;
+      font-size: 0.92rem;
+      color: #444;
+      margin-bottom: 0.9rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    /* SEE MORE LINK */
+    .see-more {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.85rem;
+    }
+    .see-more a::after { content: " →"; }
+
+    /* FOOTER */
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.8rem;
+      color: #999;
+    }
+
+    @media (max-width: 520px) {
+      .profile { flex-direction: column; align-items: center; text-align: center; }
+      .profile-links { align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="site-name">Phillip K. Ridley</span>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="#media">Media</a></li>
+    </ul>
+  </nav>
+
+  <div class="profile">
+    <!--
+      To add your photo:
+      1. Place your image file (e.g. photo.jpg) in the same folder as this index.html
+      2. Replace the <div class="avatar-placeholder"> below with:
+         <img src="photo.jpg" alt="Phillip K. Ridley" class="avatar" />
+    -->
+    <img src="photo.jpg" alt="Phillip K. Ridley" class="avatar" />
+
+    <div class="profile-text">
+      <h1>Phillip K. Ridley</h1>
+      <div class="role">Senior Research Associate</div>
+      <div class="inst">CUNY Energy Institute, City College of New York</div>
+      <div class="profile-links">
+        <a href="https://linkedin.com/in/phillip-ridley" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=AgZSZYAAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <span class="email">phillip.k.ridley@gmail.com</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>About Me</h2>
+  <p>
+    I am a materials scientist and chemical engineer with 8+ years of experience driving innovation from fundamental research to commercial scale-up. I am currently a Senior Research Associate at the
+    CUNY Energy Institute, City College of New York, where I work with
+    Director &amp; Prof. <a href="https://www.ccny.cuny.edu/profiles/sanjoy-banerjee?srsltid=AfmBOoq1ogwd0hVJZDs9s6jBvf7QFr0TnxKftiZlQXDdgLsdYT9C4rAy" target="_blank">Sanjoy Banerjee</a>,
+    supporting research contracts with the US DOE Office of Electricity and NASA
+    on grid modernization and advanced energy storage technologies.
+  </p>
+  <p>
+    Previously, I served as a <a href="https://www.energy.gov/cmei/manufacturing/manufacturing-deployment-office-mdo" target="_blank">Battery Materials and Manufacturing Supply Chain
+    Fellow</a> at the U.S. Department of Energy, working at the interface of battery materials development, manufacturing scale-up,
+    and federal policy. I completed my Ph.D. in Nano Engineering at
+    <a href="https://cne.ucsd.edu/" target="_blank">UC San Diego</a> under
+    <a href="https://lescmeng.ai/" target="_blank">Prof. Ying Shirley Meng</a>, focusing on novel
+    solid-state ion conductors for next-generation solid-state batteries.
+  </p>
+  <p>
+    I also run a small technical consultancy, helping engineering firms and deep-tech companies with
+    battery materials development, manufacturing scale-up, R&amp;D strategy, and technical grant writing.
+  </p>
+  <p class="see-more"><a href="cv.html">View full CV — publications, patents, experience &amp; education</a></p>
+
+  <h2>Research Interests</h2>
+  <p>
+    My research focuses on <strong>lithium-ion &amp; solid-state battery materials</strong> — particularly sulfide and
+    halide solid electrolytes, sodium-ion conductors, and electrode–electrolyte interfaces. I am
+    interested in advancing battery materials from fundamental discovery through proof-of-concept
+    and toward commercial manufacturing.
+  </p>
+  <p>
+    More recently, my work has expanded into <strong>battery modeling, parameterization, and digital twin
+    development</strong> for battery energy storage systems (BESS). This includes building physics-informed
+    and data-driven models that capture cell- and pack-level behavior, fitting model parameters to
+    experimental cycling and impedance data, and using these digital representations to inform performance
+    forecasting, degradation analysis, and grid-scale deployment decisions.
+  </p>
+
+  <h2>Consulting</h2>
+  <div class="consulting-note">
+    I am available for technical consulting engagements, with a primary focus on providing technical input
+    for federal grant applications and battery supply chain strategy. I also offer expertise in solid-state
+    electrolyte development, battery manufacturing scale-up, and electrochemical characterization, including
+    the design and interpretation of battery testing protocols (EIS, rate capability, cycling stability,
+    failure analysis) for R&amp;D purposes. Please get in touch to discuss your project.
+  </div>
+
+  <h2 id="media">Media</h2>
+  <ul class="media-list">
+    <li>
+      <a href="https://subscriber.politicopro.com/article/2026/06/pentagon-backs-tax-credits-foreign-ip-licensing-for-battery-making-equipment-00947438" target="_blank">Pentagon backs tax credits, foreign IP licensing for battery-making equipment</a>
+      <br><span class="outlet">POLITICO Pro</span> &nbsp;·&nbsp; <span class="media-date">June 2026</span>
+      <br>Coverage of a report I co-authored while at the U.S. Department of Energy via the Federal Consortium for Advanced Batteries (FCAB), addressing efforts to build a U.S. supply chain for advanced battery manufacturing equipment.
+    </li>
+    <li>
+      <a href="https://www.corning.com/worldwide/en/innovation/the-glass-age/science-of-glass/2021-glass-age-scholar-phillip-ridley.html" target="_blank">2021 Glass Age Scholar – Phillip Ridley</a>
+      <br><span class="outlet">Corning Incorporated</span> &nbsp;·&nbsp; <span class="media-date">2021</span>
+      <br>Profile on being named Corning's Glass Age Scholar during my Ph.D. at UC San Diego, for research on glass and glass-ceramic solid-state electrolyte materials.
+    </li>
+  </ul>
+
+  <footer>
+    Long Island City, NY &nbsp;·&nbsp; phillip.k.ridley@gmail.com &nbsp;·&nbsp; (508) 446-2034
+  </footer>
+
+</body>
+</html>
